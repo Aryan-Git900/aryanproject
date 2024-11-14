@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plastic Consumption Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="js/calculator.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Plastic Consumption Calculator</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="recycling.html">Recycling Tips</a>
+      <a href="insights.html">Data Insights</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="calculator">
+      <h2>Calculate Your Plastic Usage</h2>
+      <p>Enter your weekly usage below to see your estimated plastic footprint.</p>
+      <form id="calculator-form">
+        <div class="form-group">
+          <label for="bottles">Plastic Bottles <span class="tooltip">i</span></label>
+          <input type="number" id="bottles" name="bottles" min="0" placeholder="e.g., 5">
+        </div>
+
+        <div class="form-group">
+          <label for="bags">Plastic Bags <span class="tooltip">i</span></label>
+          <input type="number" id="bags" name="bags" min="0" placeholder="e.g., 10">
+        </div>
+
+        <div class="form-group">
+          <label for="containers">Plastic Containers <span class="tooltip">i</span></label>
+          <input type="number" id="containers" name="containers" min="0" placeholder="e.g., 3">
+        </div>
+
+        <button type="button" onclick="calculatePlastic()">Calculate</button>
+      </form>
+      <p id="result"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Plastic Consumption Tracker</p>
+  </footer>
+</body>
+</html>

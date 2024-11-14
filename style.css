@@ -1,0 +1,308 @@
+/* General Reset and Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background: #f0f4f3 url(./OIP (6).jpeg) no-repeat center center fixed;
+  background-size:cover;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+
+/* Header */
+header {
+  background-color: #2e7d32;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2em;
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #a5d6a7;
+  transform: scale(1.05);
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 40px;
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Home Section */
+.home {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  max-width: 900px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.home h2 {
+  color: #2e7d32;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.home p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #2e7d32;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #66bb6a;
+  transform: scale(1.05);
+}
+
+/* Calculator Section */
+.calculator {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+.calculator h2 {
+  color: #2e7d32;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.calculator p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.calculator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.calculator-form label {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.calculator-form input, .calculator-form button {
+  padding: 12px 20px;
+  font-size: 1.1em;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 80%;
+}
+
+.calculator-form input:focus, .calculator-form button:focus {
+  outline: none;
+  border-color: #2e7d32;
+}
+
+.calculator-form button {
+  background-color: #2e7d32;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calculator-form button:hover {
+  background-color: #66bb6a;
+}
+
+.calculator-result {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #2e7d32;
+}
+
+/* Recycling Tips Section */
+.tips {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.tips h2 {
+  color: #2e7d32;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.tip-description {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.tips-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tip {
+  flex: 1 1 30%;
+  background-color: #e8f5e9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.tip:hover {
+  transform: scale(1.05);
+}
+
+.tip-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.tip-content h3 {
+  color: #2e7d32;
+  font-size: 1.8em;
+  margin-top: 10px;
+}
+
+.tip-content p {
+  color: #555;
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #2e7d32;
+  color: white;
+  padding: 15px 0;
+  width: 100%;
+  margin-top: auto;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  font-size: 1.2em;
+}
+
+/* Tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  background-color: #2e7d32;
+  color: white;
+  padding: 4px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.tooltip:hover::after {
+  content: attr(data-tip);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  max-width: 200px;
+  white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home, .tips, .calculator {
+    padding: 20px;
+  }
+
+  .home h2, .tips h2, .calculator h2 {
+    font-size: 2em;
+  }
+
+  .cta-button {
+    padding: 12px 25px;
+  }
+
+  .tips-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tip {
+    margin-bottom: 20px;
+    flex: 1 1 100%;
+  }
+
+  .tip-content h3 {
+    font-size: 1.5em;
+  }
+
+  .tip-content p {
+    font-size: 1em;
+  }
+
+  .calculator-form input, .calculator-form button {
+    width: 100%;
+    padding: 14px;
+  }
+}
+

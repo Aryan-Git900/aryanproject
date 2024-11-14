@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Insights</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="js/chart.js"></script>
+  <style>
+    /* Centering content and providing full-page structure */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Full height container for main content */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    /* Styling for insights content */
+    .insights {
+      max-width: 1000px; /* Limits width for readability */
+      width: 100%;
+      background-color: #e8f5e9;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .insights h1 {
+      font-size: 1.8em;
+      color: #2e7d32;
+      margin-top: 0;
+    }
+
+    .insights h2 {
+      font-size: 1.5em;
+      color: #2e7d32;
+      margin-top: 20px;
+    }
+
+    .insights h3 {
+      font-size: 1.1em;
+      color: #333;
+      margin: 10px 0 20px;
+    }
+
+    /* Chart canvas styling */
+    #plasticChart {
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    /* Footer styling */
+    footer {
+      text-align: center;
+      background-color: #2e7d32;
+      color: white;
+      padding: 15px 0;
+      width: 100%;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Data Insights</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="recycling.html">Recycling Tips</a>
+      <a href="insights.html">Data Insights</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="insights">
+      <h1># Plastic Usage Trends</h1>
+      <h2>1.Monthly/Yearly Comparison:</h2>
+      <h3>Show how the average plastic usage per person has changed over time.</h3>
+
+      <h2>2.Peak Usage Periods:</h2>
+      <h3>Identify the times of the year when plastic consumption spikes.</h3>
+
+      <h1># Geographical Breakdown</h1>
+      <h2>1.Regional Differences:</h2>
+      <h3>Highlight which regions or countries have the highest and lowest plastic usage.</h3>
+
+      <h2>2.Heat Maps</h2>
+      <h3>Use heat maps to visually represent areas with significant plastic consumption.</h3>
+
+      <h1># Demographic Insights</h1>
+      <h2>1.Age Groups:</h2>
+      <h3>Analyze plastic usage based on different age groups.</h3>
+
+      <h2>2.Gender Differences:</h2>
+      <h3>Compare plastic consumption between genders.</h3>
+
+      <h1># Household vs. Individual Usage</h1>
+      <h2>1.Household Data:</h2>
+      <h3>Provide insights into how household size impacts plastic usage.</h3>
+
+      <h2>2.Per Capita Consumption:</h2>
+      <h3>Offer statistics on individual versus collective household plastic consumption.</h3>
+
+      <h1># Impact Analysis</h1>
+      <h2>1.Environmental Impact:</h2>
+      <h3>Calculate the impact of plastic consumption on pollution and wildlife.</h3>
+
+      <h2>2.Carbon Footprint:</h2>
+      <h3>Provide data on how plastic usage contributes to carbon emissions.</h3>
+
+      <h1># Behavioral Insights</h1>
+      <h2>1.Shopping Habits:</h2>
+      <h3>Analyze how often people purchase plastic-packaged products.</h3>
+
+      <h2>2.Recycling Rates:</h2>
+      <h3>Offer insights into recycling habits and effectiveness.</h3>
+
+      <h1># User-Generated Data</h1>
+      <h2>1.Surveys and Polls:</h2>
+      <h3>Collect and display data from user surveys about plastic usage habits.</h3>
+
+      <h2>2.Community Insights:</h2>
+      <h3>Highlight stories and data from users who have successfully reduced their plastic usage.</h3>
+      <canvas id="plasticChart"></canvas>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Plastic Consumption Tracker</p>
+  </footer>
+</body>
+</html>

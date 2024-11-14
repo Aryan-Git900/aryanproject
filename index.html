@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plastic Consumption Tracker - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Add custom styles for layout */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f0f4f3;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      justify-content: space-between;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    header h1 {
+      font-size: 2em;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #a5d6a7;
+      transform: scale(1.05);
+    }
+
+    main.container {
+      display: flex;
+      justify-content: space-between;  /* Distribute items across the page */
+      align-items: center;
+      padding: 40px;
+      gap: 40px;  /* Space between left and right sections */
+      min-height: 80vh;
+    }
+
+    .intro {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .intro h2 {
+      font-size: 2.5em;
+      color: #2e7d32;
+    }
+
+    .intro p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    .intro img {
+      width: 500px;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #2e7d32;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .cta-button:hover {
+      background-color: #66bb6a;
+      transform: scale(1.05);
+    }
+
+    /* Section Styling for the meters */
+    .plastic-meter {
+      background-color: #e8f5e9;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      text-align: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      flex: 1;
+    }
+
+    .plastic-meter h2 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    .plastic-meter .counter {
+      font-size: 2em;
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #2e7d32;
+      color: white;
+      padding: 15px 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Plastic Consumption Tracker</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="recycling.html">Recycling Tips</a>
+      <a href="insights.html">Data Insights</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h2>Welcome to Your Plastic Consumption Tracker</h2>
+      <p>Our mission is to help you monitor and reduce plastic waste. Use the calculator to measure your weekly usage, discover recycling tips, and view insights about your consumption.</p>
+      <img src="./download.jpeg" alt="Nature Background">
+      <a href="calculator.html" class="cta-button">Start Tracking Now</a>
+    </section>
+
+    <!-- Continuous Plastic Consumption Meter -->
+    <section class="plastic-meter">
+      <h2>Global Plastic Consumption</h2>
+      <p>Current total in tons:</p>
+      <div class="counter" id="plastic-counter">0</div>
+    </section>
+
+    <!-- Continuous Plastic Recycling Meter -->
+    <section class="plastic-meter">
+      <h2>Global Plastic Recycling</h2>
+      <p>Current total recycled in tons:</p>
+      <div class="counter" id="recycling-counter">0</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Plastic Consumption Tracker</p>
+  </footer>
+
+  <!-- JavaScript for the continuous plastic meters -->
+  <script>
+    let plasticCounterElement = document.getElementById('plastic-counter');
+    let recyclingCounterElement = document.getElementById('recycling-counter');
+
+    let plasticCount = 100000;  // Starting value for plastic consumption in tons
+    let recyclingCount = 50000; // Starting value for recycled plastic in tons
+
+    const plasticIncrement = 5;     // Increment for plastic consumption in tons
+    const recyclingIncrement = 2.5; // Increment for plastic recycling in tons
+
+    function updateCounters() {
+      plasticCount += plasticIncrement;
+      recyclingCount += recyclingIncrement;
+
+      plasticCounterElement.innerText = plasticCount.toLocaleString();
+      recyclingCounterElement.innerText = recyclingCount.toLocaleString();
+    }
+
+    // Update both counters every second
+    setInterval(updateCounters, 1000);
+  </script>
+</body>
+</html>
